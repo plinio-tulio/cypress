@@ -34,6 +34,9 @@ jobs:
     
     # instalando as dependencias
     - run: npm install
+      
+    # limpando relatórios existentes antes de gerar um novo
+    - run: npm run report:cucumber  
     
     # executar os testes usando o cucumber
     - run: npm run cy:run:cucumber
